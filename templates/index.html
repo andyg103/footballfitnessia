@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Football Fitness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h1>Football Fitness</h1>
+    <br>
+    <img src="https://www.barnsleyfc.co.uk/siteassets/image/2018-19-season/pre-season/pre-season-open-day.jpg/Large">
+    <br>
+
+    <form action="begin" method="post">
+        {% for message in get_flashed_messages() %}
+             <p>{{ message }}</p>
+         {% endfor %}
+        <br>
+        <input type="submit" value="BEGIN" id="begin">
+
+</body>
+</html>

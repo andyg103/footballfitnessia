@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Football Fitness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h1>Football Fitness</h1>
+    <br>
+    <img src="https://www.barnsleyfc.co.uk/siteassets/image/2018-19-season/pre-season/pre-season-open-day.jpg/Large">
+    <br>
+
+    <div>
+    <form action="submit" method="post">
+        {% for message in get_flashed_messages() %}
+             <p>{{ message }}</p>
+         {% endfor %}
+        <br>
+        <input type="text" name="name_input">
+        <br>
+    </div>
+        <div>
+            <form action="submit" method="post">
+        <p>What is your surname</p>
+        <br>
+        <input type="text" name="surname_input">
+
+        </div>
+
+        <div>
+            <form action="submit" method="post">
+        <p>What is your weight</p>
+        <br>
+        <input type="text" name="weight_input">
+
+
+        </div>
+
+        <div>
+            <form action="submit" method="post">
+        <p>What is your height</p>
+        <br>
+        <input type="text" name="height_input">
+
+
+        </div>
+
+        <div>
+            <form action="submit" method="post">
+        <p>What is your age</p>
+        <br>
+        <input type="text" name="age_input">
+        <br>
+
+        </div>
+
+        <div>
+            <form action="submit" method="post">
+        <p>What is your position (GK, DEF, MID, STR)</p>
+        <br>
+        <input type="text" name="position">
+        <br>
+
+        </div>
+
+        <div>
+            <form action="submit" method="post">
+        <p>What is your difficulty (Easy, Medium, Hard)</p>
+        <br>
+        <input type="text" name="difficulty">
+        <br>
+        <input type="submit" value="SUBMIT" id="submit">
+        </div>
+
+</body>
+</html>
+
+
+
+
+
